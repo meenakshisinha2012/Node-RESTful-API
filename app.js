@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 //for handling the CORS Error-allowing permission to ACCESS-CONTROL-ALLOW-ORIGIN
-/*app.use((req,res,next) =>{
+app.use((req,res,next) =>{
     res.header('Access-Control-Allow-Origin','*');
     res.header(
         'Access-Control-Allow-Header',
@@ -33,7 +33,7 @@ app.use(bodyParser.json());
         return res.status(200).json({});
     }
 });
-*/
+
 
 //to route to products.js we use /products-> if url is /products then it will go at products.js to serve the request
 app.use("/products", productRoutes);
